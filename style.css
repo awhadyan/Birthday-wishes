@@ -1,0 +1,189 @@
+    @import url(https://fonts.googleapis.com/css?family=Lato:300italic);
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #b6948a, rgb(218, 190, 176));
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+    .cake-wrapper {
+     position: fixed;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
+     top: 190px;
+     margin-top: 60px;
+    }
+    .box {
+      background: #fff;
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 100%;
+      max-width: 400px;
+      z-index: 1;
+      animation: fadeIn 1s ease;
+    }
+
+    h1 {
+      font-size: 2em;
+      color: #8b6a60;
+      font-family: 'Dancing Script', cursive;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .cake-message{
+      color: #8b6a60;
+      font-family: 'Lato', sans-serif;
+      font-weight: bold;
+      font-style:italic;
+      text-align: center;
+      display: none;
+      font-size: 16px;
+      line-height: 1.3;
+      opacity: 0;
+      animation: fadeIn 1s ease-out forwards;
+      animation-delay: 6.5s; 
+      h2 {
+       font-size: 1.9em;
+      }
+    }
+
+    input[type="password"] {
+      padding: 12px;
+      font-size: 1em;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+      width: 100%;
+      margin: 10px 0;
+      transition: 0.3s;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #8b6a60;
+      box-shadow: 0 0 8px rgba(255, 92, 162, 0.3);
+    }
+
+    button {
+      padding: 12px 25px;
+      background: #8b6a60;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #ff4f9c;
+    }
+
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    #cake {
+        display: none;
+        position: relative;
+        margin: -10em auto 0 auto;
+  
+      }
+
+      .cake {
+        display: none;
+        background: #ffffff;
+        border-radius: 10px;
+        position: absolute;
+        top: 225px;;
+        left: 50%;
+        margin-left: -2.4px;
+        margin-top: -8.33333333px;
+        width: 5px;
+        height: 35px;
+        transform: translateY(-300px);
+        backface-visibility: hidden;
+      }
+      .cake-animate {
+        animation: in 500ms 4s ease-out forwards;
+      }
+      .cake:after,
+      .cake:before {
+        background: rgba(255, 0, 0, 0.4);
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2.22222222px;
+      }
+      .cake:after {
+        top: 25%;
+        left: 0;
+      }
+      .cake:before {
+        top: 45%;
+        left: 0;
+      }
+
+      .fuego {
+        border-radius: 100%;
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        margin-left: -2.6px;
+        width: 6.66666667px;
+        height: 18px;
+      }
+      .fuego:nth-child(1) {
+        animation: fuego 2s 6.5s infinite;
+      }
+      .fuego:nth-child(2) {
+        animation: fuego 1.5s 6.5s infinite;
+      }
+      .fuego:nth-child(3) {
+        animation: fuego 1s 6.5s infinite;
+      }
+      .fuego:nth-child(4) {
+        animation: fuego 0.5s 6.5s infinite;
+      }
+      .fuego:nth-child(5) {
+        animation: fuego 0.2s 6.5s infinite;
+      }
+
+      @keyframes fuego {
+        0%, 100% {
+          background: rgba(254, 248, 97, 0.5);
+          box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+          transform: translateY(0) scale(1);
+        }
+        50% {
+          background: rgba(255, 50, 0, 0.1);
+          box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+          transform: translateY(-20px) scale(0);
+        }
+      }
+
+      @keyframes in {
+        to {
+          transform: translateY(0);
+        }
+      }
